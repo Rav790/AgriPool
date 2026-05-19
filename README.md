@@ -23,11 +23,13 @@ A comprehensive digital marketplace platform connecting farmers, transporters, a
 ## ✨ Features
 
 ### User Management
+
 - **Role-Based Access Control**: Farmers, Transporters, Agents, and Admins
 - **KYC Verification**: Know Your Customer verification for user authentication
 - **Profile Management**: Detailed user profiles with credentials and verification status
 
 ### Booking & Transportation
+
 - **Transport Listings**: Transporters can post available transport capacity
 - **Booking System**: Farmers request transportation, transporters accept/decline
 - **Load Board**: Real-time visibility of available loads and transport requests
@@ -35,27 +37,32 @@ A comprehensive digital marketplace platform connecting farmers, transporters, a
 - **Fare Calculator**: Dynamic fare calculation based on distance and route
 
 ### Market Intelligence
+
 - **Market Prices**: Real-time commodity pricing by region
 - **Price Alerts**: Automatic notifications for price changes
 - **Market Analysis**: Trend analysis and market insights
 - **Cooperative Groups**: Collective market access for farmers
 
 ### Communication & Notifications
+
 - **Messaging System**: Direct messaging between users
 - **In-App Notifications**: Real-time alerts for bookings, prices, and updates
 - **Email Notifications**: KYC status, booking confirmations, price alerts
 
 ### Dispute Resolution
+
 - **Dispute Management**: Handle conflicts between parties
 - **Review System**: Rate and review other users
 - **Activity Logging**: Complete audit trail of transactions
 
 ### Payment & Wallet
+
 - **Digital Wallet**: Secure wallet management
 - **Transaction Tracking**: Detailed transaction history
 - **Payment Integration**: Support for multiple payment methods
 
 ### Additional Features
+
 - **Multi-Language Support**: Hindi and English localization
 - **Help/Support System**: Ticketing system for user support
 - **Leaderboard**: Top performing farmers and transporters
@@ -75,6 +82,7 @@ AgriPool (Laravel 11)
 ```
 
 ### Tech Stack
+
 - **Backend**: Laravel 11, PHP 8.2+
 - **Frontend**: Vue.js, Tailwind CSS, Vite
 - **Database**: MySQL/PostgreSQL
@@ -99,27 +107,32 @@ AgriPool (Laravel 11)
 ## 🚀 Installation
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/Rav790/AgriPool.git
 cd AgriPool
 ```
 
 ### 2. Install PHP Dependencies
+
 ```bash
 composer install
 ```
 
 ### 3. Install Node Dependencies
+
 ```bash
 npm install
 ```
 
 ### 4. Create Environment File
+
 ```bash
 cp .env.example .env
 ```
 
 ### 5. Generate Application Key
+
 ```bash
 php artisan key:generate
 ```
@@ -129,6 +142,7 @@ php artisan key:generate
 ## ⚙️ Configuration
 
 ### 1. Update `.env` File
+
 ```env
 APP_NAME=AgriPool
 APP_ENV=local
@@ -154,9 +168,11 @@ QUEUE_CONNECTION=database
 ```
 
 ### 2. Configure Database Connection
+
 Update database credentials in `.env` based on your setup (MySQL or PostgreSQL)
 
 ### 3. Configure Mail Service
+
 Set up a mail driver (Mailtrap, SendGrid, Mailgun, etc.) for sending notifications
 
 ---
@@ -164,16 +180,19 @@ Set up a mail driver (Mailtrap, SendGrid, Mailgun, etc.) for sending notificatio
 ## 🗄️ Database Setup
 
 ### 1. Run Migrations
+
 ```bash
 php artisan migrate
 ```
 
 ### 2. Seed Database (Optional)
+
 ```bash
 php artisan db:seed
 ```
 
 ### 3. Create Storage Link
+
 ```bash
 php artisan storage:link
 ```
@@ -185,23 +204,29 @@ php artisan storage:link
 ### Development Environment
 
 #### Terminal 1: Start PHP Development Server
+
 ```bash
 php artisan serve
 ```
+
 Application runs at `http://localhost:8000`
 
 #### Terminal 2: Start Vite Development Server
+
 ```bash
 npm run dev
 ```
+
 Frontend dev server runs at `http://localhost:5173`
 
 #### Terminal 3: Start Queue Worker (Optional)
+
 ```bash
 php artisan queue:work
 ```
 
 ### Production Build
+
 ```bash
 npm run build
 php artisan optimize
@@ -247,6 +272,7 @@ AgriPool/
 ## 🔑 Key Modules
 
 ### Models
+
 - **User**: Core user entity with roles
 - **Booking**: Transportation booking records
 - **TransportListing**: Available transport capacity
@@ -261,9 +287,11 @@ AgriPool/
 - **CooperativeGroup**: Group management
 
 ### Services
+
 - **TransportMatchingService**: Intelligent matching algorithm for transport requests
 
 ### Controllers
+
 - **Admin**: Administrative dashboard and management
 - **Farmer**: Farmer-specific features
 - **Transporter**: Transporter-specific features
