@@ -1,59 +1,299 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🌾 AgriPool
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A comprehensive digital marketplace platform connecting farmers, transporters, and agricultural cooperatives to streamline agricultural commerce, logistics, and market access across regions.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Table of Contents
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Database Setup](#database-setup)
+- [Running the Application](#running-the-application)
+- [Project Structure](#project-structure)
+- [Key Modules](#key-modules)
+- [Contributing](#contributing)
+- [License](#license)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## ✨ Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### User Management
+- **Role-Based Access Control**: Farmers, Transporters, Agents, and Admins
+- **KYC Verification**: Know Your Customer verification for user authentication
+- **Profile Management**: Detailed user profiles with credentials and verification status
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Booking & Transportation
+- **Transport Listings**: Transporters can post available transport capacity
+- **Booking System**: Farmers request transportation, transporters accept/decline
+- **Load Board**: Real-time visibility of available loads and transport requests
+- **Transport Matching**: Intelligent matching algorithm for optimal ride/load pairing
+- **Fare Calculator**: Dynamic fare calculation based on distance and route
 
-## Laravel Sponsors
+### Market Intelligence
+- **Market Prices**: Real-time commodity pricing by region
+- **Price Alerts**: Automatic notifications for price changes
+- **Market Analysis**: Trend analysis and market insights
+- **Cooperative Groups**: Collective market access for farmers
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Communication & Notifications
+- **Messaging System**: Direct messaging between users
+- **In-App Notifications**: Real-time alerts for bookings, prices, and updates
+- **Email Notifications**: KYC status, booking confirmations, price alerts
 
-### Premium Partners
+### Dispute Resolution
+- **Dispute Management**: Handle conflicts between parties
+- **Review System**: Rate and review other users
+- **Activity Logging**: Complete audit trail of transactions
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Payment & Wallet
+- **Digital Wallet**: Secure wallet management
+- **Transaction Tracking**: Detailed transaction history
+- **Payment Integration**: Support for multiple payment methods
 
-## Contributing
+### Additional Features
+- **Multi-Language Support**: Hindi and English localization
+- **Help/Support System**: Ticketing system for user support
+- **Leaderboard**: Top performing farmers and transporters
+- **Tracking**: Real-time shipment tracking
+- **Export Functionality**: Export data in multiple formats
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 🏗️ System Architecture
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```
+AgriPool (Laravel 11)
+├── Frontend (Vue.js/Tailwind CSS)
+├── Backend (Laravel API)
+├── Database (MySQL/PostgreSQL)
+└── Services & Jobs (Queue Processing)
+```
 
-## Security Vulnerabilities
+### Tech Stack
+- **Backend**: Laravel 11, PHP 8.2+
+- **Frontend**: Vue.js, Tailwind CSS, Vite
+- **Database**: MySQL/PostgreSQL
+- **Authentication**: Laravel Sanctum
+- **Authorization**: Spatie Laravel Permission
+- **Queue**: Laravel Queue with support for multiple drivers
+- **Mail**: Laravel Mail with configurable drivers
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 📦 Prerequisites
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+- **PHP**: 8.2 or higher
+- **Composer**: Latest version
+- **Node.js**: 16.0 or higher
+- **npm**: 8.0 or higher
+- **MySQL/PostgreSQL**: 5.7+ or 10+
+- **Git**: For version control
+
+---
+
+## 🚀 Installation
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Rav790/AgriPool.git
+cd AgriPool
+```
+
+### 2. Install PHP Dependencies
+```bash
+composer install
+```
+
+### 3. Install Node Dependencies
+```bash
+npm install
+```
+
+### 4. Create Environment File
+```bash
+cp .env.example .env
+```
+
+### 5. Generate Application Key
+```bash
+php artisan key:generate
+```
+
+---
+
+## ⚙️ Configuration
+
+### 1. Update `.env` File
+```env
+APP_NAME=AgriPool
+APP_ENV=local
+APP_KEY=base64:xxxxxxxxxxxxx
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=agripool
+DB_USERNAME=root
+DB_PASSWORD=
+
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=xxxxx
+MAIL_PASSWORD=xxxxx
+MAIL_FROM_ADDRESS=noreply@agripool.com
+
+QUEUE_CONNECTION=database
+```
+
+### 2. Configure Database Connection
+Update database credentials in `.env` based on your setup (MySQL or PostgreSQL)
+
+### 3. Configure Mail Service
+Set up a mail driver (Mailtrap, SendGrid, Mailgun, etc.) for sending notifications
+
+---
+
+## 🗄️ Database Setup
+
+### 1. Run Migrations
+```bash
+php artisan migrate
+```
+
+### 2. Seed Database (Optional)
+```bash
+php artisan db:seed
+```
+
+### 3. Create Storage Link
+```bash
+php artisan storage:link
+```
+
+---
+
+## ▶️ Running the Application
+
+### Development Environment
+
+#### Terminal 1: Start PHP Development Server
+```bash
+php artisan serve
+```
+Application runs at `http://localhost:8000`
+
+#### Terminal 2: Start Vite Development Server
+```bash
+npm run dev
+```
+Frontend dev server runs at `http://localhost:5173`
+
+#### Terminal 3: Start Queue Worker (Optional)
+```bash
+php artisan queue:work
+```
+
+### Production Build
+```bash
+npm run build
+php artisan optimize
+```
+
+---
+
+## 📁 Project Structure
+
+```
+AgriPool/
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/        # API and web controllers
+│   │   ├── Middleware/         # Custom middleware
+│   │   └── Requests/           # Form validation requests
+│   ├── Models/                 # Database models
+│   ├── Notifications/          # Notification classes
+│   ├── Services/               # Business logic services
+│   └── Providers/              # Service providers
+├── bootstrap/                  # Application bootstrap files
+├── config/                     # Configuration files
+├── database/
+│   ├── migrations/             # Database migrations
+│   ├── seeders/                # Database seeders
+│   └── factories/              # Model factories
+├── public/                     # Publicly accessible files
+├── resources/
+│   ├── css/                    # Stylesheets
+│   ├── js/                     # JavaScript components
+│   └── views/                  # Blade templates
+├── routes/                     # Route definitions
+├── storage/                    # Application storage
+├── tests/                      # Test files
+├── vendor/                     # Composer dependencies
+├── composer.json               # PHP dependencies
+├── package.json                # NPM dependencies
+└── vite.config.js             # Vite configuration
+```
+
+---
+
+## 🔑 Key Modules
+
+### Models
+- **User**: Core user entity with roles
+- **Booking**: Transportation booking records
+- **TransportListing**: Available transport capacity
+- **TransportRequest**: Farmer transport requests
+- **Market**: Market listings and information
+- **MarketPrice**: Commodity pricing data
+- **Dispute**: Conflict resolution records
+- **Review**: User ratings and reviews
+- **Wallet**: User wallet management
+- **Message**: User-to-user communication
+- **PriceAlert**: Automated price notifications
+- **CooperativeGroup**: Group management
+
+### Services
+- **TransportMatchingService**: Intelligent matching algorithm for transport requests
+
+### Controllers
+- **Admin**: Administrative dashboard and management
+- **Farmer**: Farmer-specific features
+- **Transporter**: Transporter-specific features
+- **Agent**: Agent dashboard
+- **Booking**: Booking management
+- **Market**: Market data and pricing
+- **KYC**: User verification process
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+---
+
+## 📧 Contact & Support
+
+For support, questions, or feedback, please create an issue in the repository or contact the development team.
+
+---
+
+**Built with ❤️ for the agricultural community**
