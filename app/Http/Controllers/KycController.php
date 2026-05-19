@@ -32,17 +32,13 @@ class KycController extends Controller
 
         // Upload files once and store paths directly in the update data
         if ($request->hasFile('aadhaar_document')) {
-            $validated['aadhaar_document'] = cloudinary()->upload($request->file('aadhaar_document')->getRealPath(), [
-                'folder' => 'agripool/kyc/' . $user->id
-            ])->getSecurePath();
+            $validated['aadhaar_document'] = $request->file('aadhaar_document')->storeOnCloudinary('agripool/kyc/' . $user->id)->getSecurePath();
         } else {
             unset($validated['aadhaar_document']);
         }
 
         if ($request->hasFile('pan_document')) {
-            $validated['pan_document'] = cloudinary()->upload($request->file('pan_document')->getRealPath(), [
-                'folder' => 'agripool/kyc/' . $user->id
-            ])->getSecurePath();
+            $validated['pan_document'] = $request->file('pan_document')->storeOnCloudinary('agripool/kyc/' . $user->id)->getSecurePath();
         } else {
             unset($validated['pan_document']);
         }
