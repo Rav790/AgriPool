@@ -1,0 +1,27 @@
+{
+    "name": "AgriPool — Transport Sharing",
+    "short_name": "AgriPool",
+    "description": "Share transport, reduce costs, get your produce to market faster.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#f9fafb",
+    "theme_color": "#16a34a",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["agriculture", "logistics", "business"],
+    "lang": "en",
+    "dir": "ltr"
+}
