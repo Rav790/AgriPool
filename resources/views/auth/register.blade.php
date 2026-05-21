@@ -33,7 +33,7 @@
         <!-- Name -->
         <div>
             <label for="name" class="block text-sm font-medium text-gray-700 mb-1">{{ __('Full Name') }}</label>
-            <input id="name" class="block w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 shadow-sm px-4 py-3 bg-gray-50" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="John Doe" />
+            <input id="name" class="block w-full rounded-xl border-gray-300 focus:border-green-500 focus:ring-green-500 shadow-sm px-4 py-3 bg-gray-50" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" placeholder="Rahul Sharma" />
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
