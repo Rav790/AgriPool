@@ -84,9 +84,9 @@
             <h2 class="text-3xl font-bold text-gray-900 mb-12">{{ __('Leadership Team') }}</h2>
             <div class="grid sm:grid-cols-3 gap-8">
                 @foreach([
-                    ['name' => 'Rajesh Verma', 'role' => __('CEO & Founder'), 'bio' => __('20 years in agri-tech. Ex-IIT Kharagpur.'), 'color' => 'green'],
-                    ['name' => 'Meera Patel', 'role' => __('CTO'), 'bio' => __('Ex-Flipkart. Built logistics at scale.'), 'color' => 'blue'],
-                    ['name' => 'Arjun Singh', 'role' => __('Head of Operations'), 'bio' => __('10 years in supply chain for FMCG.'), 'color' => 'amber'],
+                    ['name' => 'Ravi kumar', 'role' => __('CEO & Founder'), 'bio' => __('Full Stack developer with 5 years of experience.'), 'color' => 'green'],
+                    ['name' => 'Bhaumik Jangid', 'role' => __('CTO'), 'bio' => __('AI/ML Engineer with 3 years of experience.'), 'color' => 'blue'],
+                    ['name' => 'Yashuvardhan Sahu', 'role' => __('Head of Operations'), 'bio' => __('Cyber Security Specialist with 4 years of experience.'), 'color' => 'amber'],
                 ] as $member)
                     <div class="text-center">
                         <div class="w-24 h-24 bg-{{ $member['color'] }}-100 rounded-full mx-auto flex items-center justify-center text-3xl font-bold text-{{ $member['color'] }}-600">{{ strtoupper(substr($member['name'], 0, 1)) }}</div>
